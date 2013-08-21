@@ -1,0 +1,1 @@
+﻿<?php define('_FX', 1); include_once ('../core/index.php');

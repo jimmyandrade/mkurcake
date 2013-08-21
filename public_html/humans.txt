@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Paulo Henrique (Jimmy) Andrade Mota Cristianismo -- Developer -- @jimmyandrade
+
+# THANKS
+
+    Estêvão Samuel Procópio - Developer
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
