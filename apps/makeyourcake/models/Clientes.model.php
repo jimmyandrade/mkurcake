@@ -9,9 +9,14 @@ namespace makeyourcake\models;
  */
 class ClientesModel extends \Model {
 	
+	/**
+	 * Nome da tabela de clientes a ser utilizado nas consultas SQL.
+	 */
+	protected $table = 'clientes';
+	
 	public function __construct() {
 		parent::__construct ();
-		$this->Field('idcliente', UnsignedInteger(), PrimaryKey(), 'ID');
+		$this->Field('idcliente', UnsignedInteger(), PrimaryKey(), 'ID do cliente');
 		$this->Field('cpf', String(11), Unique(), 'CPF');
 		$this->Field('telefone', String(19), Required(), 'Telefone');
 		$this->Field('endereco', String(255), Required(), 'Endereço');

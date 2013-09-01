@@ -1,6 +1,9 @@
 <?php
 
+namespace makeyourcake\pages;
+
 use makeyourcake\models\MakeYourCake_Session;
+use controls\UIDataGrid\UIDataGrid;
 
 /**
  * Página inicial do MakeYourCake
@@ -16,10 +19,20 @@ class home_Page extends MakeYourCake_Page {
 
 		parent::__construct();
 		
-		$s = new MakeYourCake_Session(\AppConfig::loadDefaultDataProvider());
+		$s = new MakeYourCake_Session(\AppConfig::getDefaultDataProvider());
 		$s->init();
 		
-		echo $s->CreateModel($s->GetModelFor('atores'));
+		$cm = $s->GetModelFor('clientes');
+		$cq = $s->query($cm);
+		$cr = $cq->GetFields();
+		
+		echo \Core::debug($cr);
+		
+/* 		
+		$c = new UIDataGrid(array(
+			'result' => $cr
+		));
+		 */
 	}
 }
 

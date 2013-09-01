@@ -1,5 +1,7 @@
 <?php
 
+namespace makeyourcake\pages;
+
 /**
  * Página-mestra do MakeYourCake
  * 
