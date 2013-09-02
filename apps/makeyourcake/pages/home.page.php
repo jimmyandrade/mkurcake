@@ -2,6 +2,8 @@
 
 namespace makeyourcake\pages;
 
+if (!defined('_FX')) { die('Access denied'); }
+
 use makeyourcake\models\MakeYourCake_Session;
 use controls\UIDataGrid\UIDataGrid;
 
@@ -10,7 +12,7 @@ use controls\UIDataGrid\UIDataGrid;
  * 
  * @author Denise Souza, Matheus Gonçalves, Paulo H. Andrade e Tatiane Vieira
  */
-class home_Page extends MakeYourCake_Page {
+class HomePage extends MakeYourCake {
 	
 	/**
 	 * Função de construção da página inicial
@@ -28,12 +30,9 @@ class home_Page extends MakeYourCake_Page {
 		
 		echo \Core::debug($cr);
 		
-/* 		
 		$c = new UIDataGrid(array(
 			'result' => $cr
 		));
-		 */
+
 	}
 }
-
-?>

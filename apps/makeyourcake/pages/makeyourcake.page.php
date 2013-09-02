@@ -2,12 +2,14 @@
 
 namespace makeyourcake\pages;
 
+use Page;
+
 /**
  * Página-mestra do MakeYourCake
  * 
  * @author Denise Souza, Matheus Gonçalves, Paulo H. Andrade e Tatiane Vieira
  */
-class MakeYourCake_Page extends \Page {
+class MakeYourCake extends Page {
 	
 	/**
 	 * Função de construção da página-mestra
