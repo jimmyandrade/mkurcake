@@ -1,6 +1,6 @@
 <?php
 
-namespace makeyourcake\models\mwb;
+namespace makeyourcake\models;
 
 /**
  * Model para a tabela de usuários

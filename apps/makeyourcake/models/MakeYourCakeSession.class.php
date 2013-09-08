@@ -2,17 +2,31 @@
 
 namespace makeyourcake\models;
 
-use makeyourcake\models\mwb\UsuariosModel;
+use AppConfig;
+
 /**
  * Sessão principal de acesso a dados do MakeYourCake.
  * 
  * @author Denise Souza, Matheus Gonçalves, Paulo H. Andrade e Tatiane Vieira
  */
-class MakeYourCake_Session extends \Session {
+class MakeYourCakeSession extends \Session {
+	
+	/**
+	 *
+	 * @param
+	 *        	$uri
+	 *        	
+	 */
+	public function __construct($uri = null) {
+		if(is_null($uri)) {
+			$uri = AppConfig::getInstance()->defaultDataProvider;
+		}
+		parent::__construct ($uri);
+	}
 	
 	/**
 	 * Inicializa a Session atual.
-	 *        	
+	 *
 	 */
 	public function init() {
 		$this->AddModel(new AtoresModel());
@@ -34,3 +48,5 @@ class MakeYourCake_Session extends \Session {
 		$this->AddModel(new FornoModel());
 	}
 }
+
+?>

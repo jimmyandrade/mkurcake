@@ -8,6 +8,10 @@ _notes/
 apps/*/assets/bootstrap/
 apps/*/assets/html5-boilerplate/
 
+# Outros aplicativos
+apps/alpharrate/
+public_alpharrate/
+
 # Arquivo de configuração e core
 config.xml
 core/
@@ -96,13 +100,15 @@ build/
 *.log
 *.scc
 
-# Visual C++ cache files
+# Cache files
 ipch/
 *.aps
 *.ncb
 *.opensdf
 *.sdf
 *.cachefile
+cache/
+*.Cache
 
 # Visual Studio profiler
 *.psess
@@ -159,7 +165,6 @@ AppPackages/
 
 # Others
 sql/
-*.Cache
 ClientBin/
 [Ss]tyle[Cc]op.*
 ~$*

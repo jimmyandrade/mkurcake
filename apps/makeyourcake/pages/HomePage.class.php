@@ -4,35 +4,37 @@ namespace makeyourcake\pages;
 
 if (!defined('_FX')) { die('Access denied'); }
 
-use makeyourcake\models\MakeYourCake_Session;
+use Debug;
 use controls\UIDataGrid\UIDataGrid;
+use makeyourcake\models\MakeYourCakeSession;
+use TableHeader;
 
 /**
  * Página inicial do MakeYourCake
  * 
  * @author Denise Souza, Matheus Gonçalves, Paulo H. Andrade e Tatiane Vieira
  */
-class HomePage extends MakeYourCake {
+class HomePage extends MakeYourCakePage {
 	
 	/**
 	 * Função de construção da página inicial
 	 */
 	public function __construct() {
 
+		Debug::clientConsoleLog('Construindo página inicial...');
 		parent::__construct();
+		Debug::clientConsoleLog('Construção da página inicial finalizada.');
 		
-		$s = new MakeYourCake_Session(\AppConfig::getDefaultDataProvider());
+		$s = new MakeYourCakeSession();
 		$s->init();
 		
 		$cm = $s->GetModelFor('clientes');
 		$cq = $s->query($cm);
 		$cr = $cq->GetFields();
 		
-		echo \Core::debug($cr);
-		
-		$c = new UIDataGrid(array(
+		/*$c = new UIDataGrid(array(
 			'result' => $cr
-		));
+		));*/
 
 	}
 }

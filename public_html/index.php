@@ -1,1 +1,1 @@
-﻿<?php define('_FX', 1); include_once ('../core/index.php');
+﻿<?php define('APP_ID', 'makeyourcake'); include '../core/index.php';
