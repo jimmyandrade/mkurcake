@@ -1,0 +1,9 @@
+# ativa o motor de reescrita
+RewriteEngine on
+
+# procura diretorios e arquivos
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# faz o redirecionamento
+RewriteRule . index.php [L]

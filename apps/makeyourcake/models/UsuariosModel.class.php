@@ -13,7 +13,7 @@ class UsuariosModel extends \Model {
 	
 	public function __construct() {
 		parent::__construct ();
-		$this->Field('idusuario', UnsignedInteger(), PrimaryKey(), 'ID');
+		$this->Field('idusuario', AutoIncrement(), PrimaryKey(), 'ID');
 		$this->Field('nomecompleto', String(255), Required(), 'Nome completo');
 		$this->Field('email', String(255), Unique(), 'E-mail');
 		$this->Field('senha', String(255), Required(), 'Senha');

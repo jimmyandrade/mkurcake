@@ -14,6 +14,7 @@ class CasosDeUsoModel extends \Model {
 	public function __construct() {
 		parent::__construct ();
 		$this->Field('idcasodeuso', AutoIncrement(), PrimaryKey(), 'ID do caso de uso');
-		$this->Field('nomecasodeuso', String(45), Required(), 'Nome do caso de uso');
+		$this->Field('nomecasodeuso', String(45), Unique(), 'Nome do caso de uso');
+		$this->Field('descricaocasodeuso', String(255), null, 'Descrição do caso de uso');
 	}
 }

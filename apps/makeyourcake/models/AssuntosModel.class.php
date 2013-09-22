@@ -13,7 +13,7 @@ class AssuntosModel extends \Model {
 	
 	public function __construct() {
 		parent::__construct ();
-		$this->Field('idassunto', UnsignedInteger(), PrimaryKey(), 'ID do assunto');
+		$this->Field('idassunto', AutoIncrement(), PrimaryKey(), 'ID do assunto');
 		$this->Field('assunto', String(45), Required(), 'Nome do assunto');
 	}
 }

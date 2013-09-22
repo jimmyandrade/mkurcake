@@ -1,0 +1,17 @@
+<div id="wrap">
+	<div class="container">
+		<form class="form-signin img-rounded" method="post">
+			<fieldset>
+				<h2 class="form-signin-heading">Entrar<small class="hidden-xs"> no MakeYourCake</small></h2>
+			</fieldset>
+			{$MensagemLogin}
+			<label for="email" class="sr-only">E-mail</label>
+			<input type="text" class="form-control" id="email" name="email" placeholder="E-mail" autofocus required title="Por favor, informe um endereço de e-mail válido. Exemplo: seunome@si.eti.br" autocapitalize="off" autocorrect="off">
+			<label for="senha" class="sr-only">Senha</label>
+			<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required title="Por favor, informe uma senha válida." autocapitalize="off" autocorrect="off">
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+		</form>
+		<p id="chamada-cadastro">Ainda não tem uma conta? <a href="{$EnderecoSite}/cadastrar">Faça seu cadastro</a>.</p>
+	</div>
+</div>
+{include file="footer.tpl.html"}

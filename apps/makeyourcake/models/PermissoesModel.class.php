@@ -13,7 +13,8 @@ class PermissoesModel extends \Model {
 	
 	public function __construct() {
 		parent::__construct ();
-		$this->Field('ator', UnsignedInteger(), ForeignKey('atores', 'idator'), 'ID do ator');
-		$this->Field('casodeuso', UnsignedInteger(), ForeignKey('casosdeuso', 'idcasodeuso'), 'ID do caso de uso');
+		$this->Field('idpermissao', AutoIncrement(), PrimaryKey(), 'ID da permissão');
+		$this->Field('ator', UnsignedInteger(), ForeignKey('makeyourcake\models\AtoresModel', 'idator'), 'ID do ator');
+		$this->Field('casodeuso', UnsignedInteger(), ForeignKey('makeyourcake\models\CasosDeUsoModel', 'idcasodeuso'), 'ID do caso de uso');
 	}
 }
